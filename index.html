@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      
+
+    </style>
+</head>
+<body>
+  <section class="form-payment">
+    <div class="b-center-content">
+
+      <!-- lang -->
+      <div class="container-lang">
+        <div class="lang-wrapper">
+          <div class="checkout-block">
+            <div class="checkout-arow checkout-mobile">
+              <a href="#" class="checkout-link">
+                <img src="images/arrow.png" alt="">
+              </a>
+            </div>
+            <div class="checkout-text checkout-mobile">
+              <a href="#" class="checkout-link">Checkout</a>
+            </div>
+            <div class="checkout-lang">
+              <a href="#" class="lang-link link-mobile">Eng</a>
+              <a href="#" class="lang-link lang-link-active">Укр</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- lang -->
+
+      <!-- payment -->
+      <div class="conatiner-payment">
+        <div class="payment-row">
+          <div class="payment-field">
+            <div class="checkout-block checkout-b-position">
+              <div class="checkout-arow checkout-desktop">
+                <a href="#" class="checkout-link">
+                  <img src="images/arrow.png" alt="">
+                </a>
+              </div>
+              <div class="checkout-text checkout-desktop">
+                <a href="#" class="checkout-link">Checkout</a>
+              </div>
+            </div>
+            <div class="payment-rules">
+              <p class="payment-heading">5 days free</p>
+              <p class="payment-subheading">then 299.99 UAH per 14 days</p></div>
+            <div class="payfrom-services">
+              <button type="button" aria-label="" class="btn-pay-block payfrom-btn payfrom-apple"></button>
+            </div>
+            <div class="another-payform">
+              <span class="another-text">or pay with card</span>
+            </div>
+            <div class="card-flieds">
+              <div class="card-row">
+                <label for="card-number" class="pay-label-text">Card Number</label>
+                <input type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="16" class="pay-control-area" id="card-number" placeholder="1234 1234 1234 1234">
+              </div>
+              <div class="card-row card-row-flex">
+                <div class="card-col-sm">
+                  <label for="card-date" class="pay-label-text">Expiration Date</label>
+                  <input type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="5" class="pay-control-area" id="card-date" placeholder="MM/YY">
+                </div>
+                <div class="card-col-sm marker-cvc-icon">
+                  <label for="card-cvc" class="pay-label-text">CVC</label>
+                  <input type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="3" class="pay-control-area" id="card-cvc" placeholder="&bull; &bull; &bull;">
+                  <span class="icon-cvc"></span>
+                </div>
+              </div>
+            </div>
+            <div class="btn-payment">
+              <button type="submit" id="btn-target" class="button-pay">
+                <span class="processing-block">
+                <span class="main-content"><span class="main-content-desktop">Pay 299.99 UAH</span><span class="main-content-mobile">Start Trial</span></span>
+                <span class="processing-content">
+                  <span class="processing-icon"></span>
+                  <span class="processing-text">Processing payment</span>
+                </span>
+                </span>
+              </button>
+            </div>
+            <div class="desc-field">You'll have your <span class="text-strong">Plan Pro during 1 year</span>. After this period of time, your plan will be 
+              <span class="text-strong">automatically renewed</span> with its original price without any discounts applied.</div>
+          </div>
+          <div class="order-field">
+            <div class="order-block">
+              <div class="order-b-center">
+                <div class="order-info">
+                  <p class="order-heading">Order info &lt;= 100 char.</p>
+                  <p class="order-subheading">Description &lt;= 400 char.</p>
+                </div>
+                <div class="order-product">
+                  <p class="order-name">Lamel Professional Smart Skin Compact Powder</p>
+                  <p class="order-subname">Пудра для лица</p>
+                </div>
+                <div class="order-price">
+                  <p class="price-info price-desktop">5 days free</p>
+                  <p class="price-text price-desktop">then 399.99 UAH per 14 days</p>
+                  <p class="price-text price-mobile">299.99 UAH / month</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- payment -->
+
+      <!-- produced -->
+      <p class="produced">Powered by <span class="text-strong">Solid</span></p>
+      <!-- produced -->
+    </div>
+  </section>
+
+  <script>
+    let btnTarget = document.querySelector('#btn-target'),
+        processing = document.querySelector('.processing-content'),
+        mainContent = document.querySelector('.main-content')
+    ;
+    btnTarget.addEventListener('mouseup', function(){
+      processing.style.opacity = "1";
+      processing.style.marginBottom = "16px";
+      processing.classList.add('gotop');
+      mainContent.style.opacity = "0";
+      mainContent.style.marginTop = "0";
+      mainContent.classList.add('gotop');
+    })
+  </script>
+
+</body>
+</html>   
